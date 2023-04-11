@@ -1,0 +1,19 @@
+[21649:21649:0410/104146.339001:WARNING:chrome_main_delegate.cc(594)] This is Chrome version 112.0.5615.49 (not a warning)
+[21649:21649:0410/104146.471654:INFO:chrome_browser_cloud_management_controller.cc(167)] Starting CBCM Controller Initialization
+[21649:21649:0410/104146.471732:INFO:chrome_browser_cloud_management_controller.cc(195)] No machine level policy manager exists.
+[21649:21649:0410/104146.581539:WARNING:bluez_dbus_manager.cc(247)] Floss manager not present, cannot set Floss enable/disable.
+[21692:21692:0410/104147.166059:ERROR:shared_image_manager.cc(199)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[21692:21692:0410/104147.166634:ERROR:shared_image_manager.cc(199)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[21692:21692:0410/104147.170976:ERROR:shared_image_manager.cc(199)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[21692:21692:0410/104147.172110:ERROR:shared_image_manager.cc(199)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
+[21649:21649:0410/104147.475581:INFO:CONSOLE(1)] "Uncaught ReferenceError: $ is not defined", source:  (1)
+[21649:21649:0410/104147.476103:INFO:CONSOLE(1)] "Uncaught ReferenceError: $ is not defined", source:  (1)
+[21649:21649:0410/104147.476411:INFO:CONSOLE(1)] "Uncaught ReferenceError: $ is not defined", source:  (1)
+[21649:21649:0410/104147.793771:INFO:CONSOLE(0)] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://www.betexplorer.com/next/soccer/?year=2023&month=04&day=11 (0)
+[21693:21712:0410/104148.260419:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -101
+[21693:21712:0410/104148.303114:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -101
+[21693:21712:0410/104148.320532:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -101
+[21693:21712:0410/104148.363406:ERROR:ssl_client_socket_impl.cc(992)] handshake failed; returned -1, SSL error code 1, net_error -101
+[21693:21713:0410/104154.286074:WARNING:sqlite_persistent_store_backend_base.cc(159)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:207 to client_task_runner_.
+[21693:21713:0410/104154.286133:WARNING:sqlite_persistent_store_backend_base.cc(159)] Failed to post task from FlushAndNotifyInBackground@net/extras/sqlite/sqlite_persistent_store_backend_base.cc:207 to client_task_runner_.
+[21649:21649:0410/104154.337518:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
