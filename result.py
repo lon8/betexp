@@ -3,7 +3,7 @@ import json
 import os
 from bs4 import BeautifulSoup
 import requests
-import tomllib
+import configparser
 
 cookies = {
     'my_timezone': '+2', # Важно. Если будете работать с куки, то этот параметр обязателен
@@ -27,10 +27,10 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36',
 }
 
-with open('config.toml', 'rb') as file: # Считываем config - файл
-    cdata = tomllib.load(file)
+config = configparser.ConfigParser()
+config.read('config.ini')
 
-pathname = f"data/soccer/{cdata['date']['year']}-{cdata['date']['month']}-{cdata['date']['day']}" #Создаем путь, если его нет
+pathname = f"data/soccer/{config['date']['year']}-{config['date']['month']}-{config['date']['day']}" #Создаем путь, если его нет
 try:
     os.makedirs(pathname)
 except:

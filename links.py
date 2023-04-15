@@ -2,20 +2,19 @@
 # Обязательно запускается перед main.py
 # 
 
+import configparser
 import json
 import os
 from time import sleep
-import tomllib
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 result = {}
-with open('config.toml', 'rb') as file: # Считываем config - файл
-    cdata = tomllib.load(file)
+config = configparser.ConfigParser()
+config.read('config.ini')
 
-# Создаем путь. Если путь уже существует, то он не будет его повторно создавать
-pathname = f"data/soccer/{cdata['date']['year']}-{cdata['date']['month']}-{cdata['date']['day']}" 
+pathname = f"data/soccer/{config['date']['year']}-{config['date']['month']}-{config['date']['day']}" 
 try:
     os.makedirs(pathname)
 except:
@@ -25,12 +24,12 @@ except:
 options = webdriver.ChromeOptions()
 options.add_argument('--allow-profiles-outside-user-dir')
 options.add_argument('--enable-profile-shortcut-manager')
-options.add_argument('user-data-dir=C:/Users/vladk/betexp/User_win') # См. комментарии в аналогичном отрезке кода в файле main.py
+options.add_argument('user-data-dir=/home/lon8/privet/betexp/User') # См. комментарии в аналогичном отрезке кода в файле main.py
 options.add_argument('--profile-directory=Profile 1')
 
 browser = webdriver.Chrome(options=options)
 
-browser.get(f"https://www.betexplorer.com/next/soccer/?year={cdata['date']['year']}&month={cdata['date']['month']}&day={cdata['date']['day']}")
+browser.get(f"https://www.betexplorer.com/next/soccer/?year={config['date']['year']}&month={config['date']['month']}&day={config['date']['day']}")
 
 sleep(3) # Ждём три секунды для полной прогрузки страницы
 
