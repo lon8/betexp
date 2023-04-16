@@ -54,9 +54,10 @@ for name, link in jdata.items():
 
     team_1 = teams[0].text # Команда №1
     team_2 = teams[1].text # Команда №2
-
-    score = soup.find('p', id='js-score').text # Счет игры. Если его еще нет, будет указано "-:-"
-
+    try:
+        score = soup.find('p', id='js-score').text # Счет игры. Если его еще нет, будет указано "-:-"
+    except:
+        score = 'POSTP.'
     with open(f'{pathname}/result.csv', 'a', encoding='utf-8') as file: # Записываем данные в файл
         writer = csv.writer(file)
         writer.writerow((
